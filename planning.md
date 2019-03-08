@@ -1,15 +1,14 @@
 HTML
 
-    Create input form that takes in:
+    <!-- Create input form that takes in:
         - Employee first name
         - Employee Last name
         - ID number
         - Job Title
-        - annual salary
+        - annual salary -->
 
     Create a 'submit' button
 
-    Create a 'delete button
 
     A table to display the output on the DOM
         - A table header <th> that has the input fields
@@ -28,3 +27,5 @@ Script
     Create a delete button that 
         -removes an employee from the DOM. 
         -For Base mode, it does not need to remove that Employee's salary from the reported total.
+
+We will create a delete button for each employee that populates when they are added and will delete them from the table.
