@@ -7,6 +7,7 @@ function readyNow(){
     $('#submitButton').on('click', addEmployee)
 }
 
+//add an employee to the employees array
 function addEmployee(){
     let newEmployee = {
         firstName: $( '#firstName' ).val(),
@@ -27,8 +28,18 @@ function addEmployee(){
     // displayEmployees();
 }//end addEmployee
 
-
-//Add an employee
-function addEmployee(){
-    new Employee(``)
-}
+//display employees on the dom
+function displayEmployees(){
+    let el= $('#table')
+    //for loop through array
+    for (let employee of employees)
+    //create a table row, and then a <td> for each in table
+    el.append( `<tr>
+    <td>${employee.firstName}</td>
+    <td>${employee.lastName}</td>
+    <td>${employee.employeeID}</td>
+    <td>${employee.jobTitle}</td>
+    <td>${employee.annualSalary}</td>
+    </tr>`)
+    //end for loop
+}//end displayEmployees
