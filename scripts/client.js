@@ -25,7 +25,8 @@ function addEmployee(){
     $( '#jobTitle' ).val(''),
     $( '#annualSalary' ).val(''),
     console.log( 'employees', employees)
-    // displayEmployees();
+    displayEmployees();
+    // totalCost();
 }//end addEmployee
 
 //display employees on the dom
