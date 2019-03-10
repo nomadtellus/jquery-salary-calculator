@@ -64,6 +64,8 @@ function totalCost(){
         total.append(Math.round(sum));
     }
     else {
+        $('#totalCost').css('color', 'black')
+
         return total.append(Math.round(sum));
     }
 }
