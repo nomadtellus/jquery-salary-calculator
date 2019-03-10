@@ -26,12 +26,13 @@ function addEmployee(){
     $( '#annualSalary' ).val(''),
     console.log( 'employees', employees)
     displayEmployees();
-    // totalCost();
+    totalCost();
 }//end addEmployee
 
 //display employees on the dom
 function displayEmployees(){
     let el= $('#table')
+    el.empty();
     //for loop through array
     for (let employee of employees)
     //create a table row, and then a <td> for each in table
@@ -43,4 +44,27 @@ function displayEmployees(){
     <td>${employee.annualSalary}</td>
     </tr>`)
     //end for loop
+    
 }//end displayEmployees
+
+//total up all salaries and display the total cost
+function totalCost(){
+    let total= $('#totalCost')
+    let sum = 0
+    total.empty();
+
+    for (let i=0; i<employees.length; i++) 
+    //add up salaries
+    sum = sum + Number(employees[i].annualSalary)/12;
+    
+    //red text if over 20,000
+    if (sum > 20000){
+        $('#totalCost').css('color', 'red')
+        total.append(Math.round(sum));
+    }
+    else {
+        return total.append(Math.round(sum));
+    }
+    
+
+}
