@@ -5,6 +5,7 @@ let employees = []
 function readyNow(){
     console.log( 'ready now' );
     $('#submitButton').on('click', addEmployee)
+    $('#deleteButton').on('click', deleteEmployee)
 }
 
 //add an employee to the employees array
@@ -28,6 +29,13 @@ function addEmployee(){
     displayEmployees();
     totalCost();
 }//end addEmployee
+
+//delete the employee from the array
+function deleteEmployee(){
+    let employeeData = $(this).data();
+
+    }
+}
 
 //display employees on the dom
 function displayEmployees(){
@@ -65,6 +73,4 @@ function totalCost(){
     else {
         return total.append(Math.round(sum));
     }
-    
-
-}
+}//end totalCost
